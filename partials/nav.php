@@ -4,6 +4,12 @@
       <img src="assets/images/listras.png" alt="Listras esquerda" class="nav-stripe" />
       <img src="assets/images/logo.JPG" alt="Logo da comunidade" class="nav-logo" />
     </div>
+    <div class="ms-3">
+      <span class="navbar-title d-lg-none ms-5 text-center fw-bold">
+        Menino Jeus de Praga
+      </span>
+    </div>
+
     <button
       class="navbar-toggler ms-auto"
       type="button"
@@ -22,7 +28,7 @@
           <a class="nav-link fw-semibold" href="/">Início</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-semibold" href="artigos.php">Artigos e Formações</a>
+          <a class="nav-link fw-semibold" href="artigos_lista.php">Artigos e Formações</a>
         </li>
         <li class="nav-item">
           <a class="nav-link fw-semibold" href="#">Horários</a>

@@ -6,6 +6,7 @@
 @import url("hours.css");
 @import url("icons.css");
 @import url("video.css");
+@import url("articlePage.css");
 
 /* RESET BÁSICO */
 * {
@@ -75,6 +76,7 @@ small {
   display: inline-block;
   width: 100%;
   overflow: hidden;
+  height: 12rem;
 }
 
 .title-banner h1 {
@@ -83,7 +85,30 @@ small {
   font-family: "Cinzel", serif;
   z-index: 2;
   font-size: 2.5rem;
-  padding: 50px 20px;
+  padding: 50px 100px;
+}
+
+@media (max-width: 768px) {
+
+   .title-banner {
+    width: 100vw;           /* largura total da viewport */
+    margin-left: calc(-50vw + 50%); /* centraliza ultrapassando o container */
+    padding: 0;             /* remove padding do container */
+    height: 12rem;          /* mantém altura */
+  }
+
+  .title-banner h1 {
+    position: relative;
+    color: white;
+    font-family: "Cinzel", serif;
+    z-index: 2;
+    font-size: 1.5rem;
+    padding: 50px 30px;
+  }
+
+  .title-article-mobile{
+    margin-left: 20px;
+  }
 }
 
 .banner-img {
