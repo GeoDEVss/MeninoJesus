@@ -1,0 +1,98 @@
+@import url("nav.css");
+@import url("blog.css");
+@import url("articles.css");
+@import url("formation.css");
+@import url("hero.css");
+@import url("hours.css");
+@import url("icons.css");
+@import url("video.css");
+
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: clip;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+/* TIPOGRAFIA GLOBAL */
+
+/* TÍTULOS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cinzel", serif;
+  letter-spacing: 0.04em;
+}
+
+/* TEXTOS, PARÁGRAFOS E SUBTÍTULOS */
+p,
+span,
+a,
+li,
+small {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden; /* impede rolagem horizontal */
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.title-banner {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.title-banner h1 {
+  position: relative;
+  color: white;
+  font-family: "Cinzel", serif;
+  z-index: 2;
+  font-size: 2.5rem;
+  padding: 50px 20px;
+}
+
+.banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px) brightness(0.6);
+  z-index: 1;
+}

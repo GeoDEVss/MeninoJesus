@@ -1,0 +1,89 @@
+/* section blog*/
+
+.section-blog {
+  position: relative;
+  padding: 100px 20px;
+  overflow: hidden;
+}
+
+/* imagem de fundo */
+.blog-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+/* conteúdo */
+.blog-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: auto;
+}
+
+.blog-content h2 {
+  font-size: 2.3rem;
+  color: #3b1f0b;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.blog-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/*imagem blog*/
+
+.blog-image-top {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.blog-image-top img {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.prayer-section {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  margin-top: 80px;
+}
+
+.prayer-image {
+  flex: 0 0 300px;
+}
+
+.prayer-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+  .prayer-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .prayer-image {
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  /* ESCONDER LISTRA NO MOBILE */
+  .nav-stripe {
+    display: none;
+  }
+}

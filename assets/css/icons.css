@@ -1,0 +1,74 @@
+/* PARÁGRAFO E ÍCONES */
+.social-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a img {
+  width: 65px; /* tamanho dos ícones */
+  height: 65px;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* FOOTER */
+.site-footer {
+  background-color: #fff6b1;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+.site-footer .footer-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .social-text {
+    font-size: 0.95rem; /* texto um pouco menor */
+  }
+
+  .social-icons a img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .site-footer .footer-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-text {
+    font-size: 0.9rem;
+    padding: 0 10px; /* evita que encoste nas bordas */
+  }
+
+  .social-icons a img {
+    width: 25px;
+    height: 25px;
+    margin: 0 5px; /* espaçamento menor entre ícones */
+  }
+
+  .site-footer .footer-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .site-footer p {
+    font-size: 0.9rem; /* texto menor para caber na tela */
+    margin: 5px 0;
+  }
+}
