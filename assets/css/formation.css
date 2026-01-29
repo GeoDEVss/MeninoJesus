@@ -1,0 +1,71 @@
+/* SEÇÃO FORMAÇÕES */
+.Formacoes {
+  background: #fefff0;
+}
+
+/* SUBTÍTULO */
+.formacoes-subtitle {
+  font-size: 1.2rem;
+  color: #5a5a5a;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* CARD */
+.formacao-card {
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  overflow: hidden;
+  background: #fff;
+}
+
+.formacao-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* IMAGEM */
+.formacao-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* TEXTO */
+.formacao-text {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* BOTÃO */
+.btn-formacao {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #8c6a2f;
+  border: 1.8px solid #c8a44b;
+  border-radius: 30px;
+  padding: 8px 22px;
+  transition: all 0.3s ease;
+}
+
+.btn-formacao:hover {
+  background: linear-gradient(135deg, #f3dc8f, #c8a44b);
+  color: #3b2a0f;
+  box-shadow: 0 8px 18px rgba(200, 164, 75, 0.35);
+}
+
+@media (max-width: 768px) {
+  /* FORMAÇÕES */
+  .formacao-card {
+    margin-bottom: 20px;
+  }
+
+  .formacao-img {
+    height: 180px;
+  }
+}

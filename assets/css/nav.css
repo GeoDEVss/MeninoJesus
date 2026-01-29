@@ -1,0 +1,101 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 5px;
+}
+
+/* LISTRAS — BASE */
+.nav-left,
+.nav-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+/* ESQUERDA */
+.nav-left {
+  left: 0;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* DIREITA */
+.nav-right {
+  right: 0;
+  padding-right: 0;
+  display: flex;
+  align-items: center;
+  transform: translateY(-50%) scaleX(-1);
+}
+
+/* IMAGENS */
+.nav-icon {
+  height: 40px;
+  width: auto;
+}
+
+.nav-logo {
+  height: 45px;
+  width: auto;
+}
+
+.nav-stripe {
+  height: 30px;
+  width: auto;
+}
+
+/* LINKS */
+.nav-links {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 0;
+  flex-wrap: nowrap; /* força todos na mesma linha */
+}
+
+.nav-links a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 16px;
+  flex-wrap: nowrap; /* força todos na mesma linha */
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* TABLETS */
+@media (max-width: 992px) {
+  .nav-left,
+  .nav-right {
+    position: static;
+    transform: none;
+  }
+
+  .container-fluid {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-toggler {
+    margin-left: auto;
+    z-index: 1055;
+  }
+
+  .navbar-collapse {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav-right {
+    display: none;
+  }
+}
