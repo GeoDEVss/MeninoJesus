@@ -1,3 +1,9 @@
+<?php
+if (!isset($_GET['view'])) {
+  header('Location: artigos_lista.php');
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -10,17 +16,43 @@
     <?php include __DIR__ .  '/partials/nav.php'; ?>
   </header>
 
-  <?php include __DIR__ .  '/content/artigos.php'; ?>
+  <?php include __DIR__ .  '/content/artigos_content.php'; ?>
 
   <main class="container my-5">
-    <?php foreach ($artigos as $artigo): ?>
+
+    <?php
+    $view = $_GET['view'] ?? null;
+    $artigoAtual = null;
+
+    foreach ($artigos as $artigo) {
+      if ($artigo['view'] == $view) {
+        $artigoAtual = $artigo;
+        break;
+      }
+    }
+    ?>
+
+    <?php if ($artigoAtual): ?>
+
       <div class="title-banner text-center mb-4">
-        <img src="<?= $artigo['banner'] ?>" alt="Banner do artigo" class="banner-img">
-        <h1><?= $artigo['titulo'] ?></h1>
+        <img src="<?= $artigoAtual['banner'] ?>" alt="Banner do artigo" class="banner-img">
+        <h1><?= $artigoAtual['titulo'] ?></h1>
       </div>
-      <?= $artigo['conteudo'] ?>
-      <p class="text-end"><em>Texto elaborado por <?= $artigo['autor'] ?>.</em></p>
-    <?php endforeach; ?>
+
+      <?= $artigoAtual['conteudo'] ?>
+
+      <p class="text-end">
+        <em>Texto desenvolvido por <?= $artigoAtual['autor'] ?>.</em>
+      </p>
+
+    <?php else: ?>
+
+      <div class="alert alert-warning text-center">
+        Artigo não encontrado.
+      </div>
+
+    <?php endif; ?>
+
   </main>
 
   <?php include __DIR__ . '/partials/footer.php'; ?>
