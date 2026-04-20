@@ -10,6 +10,50 @@
   bottom: 5px;
 }
 
+/* Faz o dropdown abrir no hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Mega menu largura total */
+.mega-menu {
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 100%;
+  border-radius: 0;
+}
+
+/* Remove centralização que quebra layout */
+.navbar-nav {
+  align-items: center;
+}
+
+/* Ajusta links */
+.dropdown-item {
+  white-space: normal;
+  padding: 5px 10px;
+}
+
+.nav-item.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 0;
+  margin-top: 0 !important; /* remove qualquer gap */
+}
+
+.nav-item.dropdown::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 20px; /* cria uma “ponte invisível” */
+}
+
 /* LISTRAS — BASE */
 .nav-left,
 .nav-right {

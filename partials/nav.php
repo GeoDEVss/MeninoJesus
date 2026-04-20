@@ -1,3 +1,5 @@
+<?php include 'pastorais.php'; ?>
+
 <nav class="navbar navbar-expand-lg bg-white py-3 shadow-sm navbar-light">
   <div class="container-fluid">
     <div class="nav-left">
@@ -23,7 +25,7 @@
     <div
       class="collapse navbar-collapse justify-content-center"
       id="navbarMain">
-      <ul class="navbar-nav gap-lg-4 text-center">
+      <ul class="navbar-nav gap-lg-4">
         <li class="nav-item">
           <a class="nav-link fw-semibold" href="/">Início</a>
         </li>
@@ -36,9 +38,34 @@
         <li class="nav-item">
           <a class="nav-link fw-semibold" href="#">Histórias</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link fw-semibold" href="#">Pastorais e Movimentos</a>
-        </li>
+          <li class="nav-item dropdown position-static">
+            <a class="nav-link fw-semibold" href="#" id="pastoraisDropdown">
+              Pastorais e Movimentos
+            </a>
+            <?php
+              function gerarSlug($texto) {
+                  return strtolower(str_replace(
+                      [' ', 'ã', 'á', 'é', 'í', 'ó', 'ú', 'ç'],
+                      ['-', 'a', 'a', 'e', 'i', 'o', 'u', 'c'],
+                      $texto
+                  ));
+              }
+              ?>
+              <div class="dropdown-menu mega-menu p-4">
+                <div class="row">
+
+                  <?php foreach ($pastorais as $coluna): ?>
+                    <div class="col-md-4">
+                      <?php foreach ($coluna as $item): ?>
+                        <a class="dropdown-item" href="/pastoral.php?pastoral=<?= gerarSlug($item) ?>">
+                          <?= $item ?>
+                        </a>
+                      <?php endforeach; ?>
+                    </div>
+                  <?php endforeach; ?>
+                </div>
+              </div>
+          </li>
       </ul>
     </div>
     <div class="nav-right d-none d-lg-flex">
