@@ -99,3 +99,11 @@
     display: none;
   }
 }
+
+.dropdown-menu.mega-menu {
+  width: 100%;
+  min-width: 40rem;
+  max-width: 100vw;
+  left: 0;
+  right: 0;
+}
